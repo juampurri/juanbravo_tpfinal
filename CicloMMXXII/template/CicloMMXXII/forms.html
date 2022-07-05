@@ -1,0 +1,18 @@
+<!-- extends index-->
+{% extends "index.html" %}
+<!-- static -->
+{% load static %}
+<!-- contenido-->
+{% block contenido %}
+<main>
+  <form action="alta_curso" method="POST">
+    {% csrf_token %}
+    <p>Name:</p>
+    <input type="text" name="name" required />
+    <p>Section:</p>
+    <input type="number" name="section" required />
+
+    <input type="submit" value="Send" />
+  </form>
+</main>
+{% endblock %}

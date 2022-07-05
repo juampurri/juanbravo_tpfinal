@@ -1,0 +1,19 @@
+<!-- extends index-->
+{% extends "index.html" %}
+<!-- static -->
+{% load static %}
+<!-- contenido-->
+{% block contenido %}
+<main>
+  <form action="{% url 'edit_cadete' cadete.id %}" method="POST">
+    {% csrf_token %}
+    <p>Name :</p>
+    <input type="text" name="name" required />
+    <p>Lastname :</p>
+    <input type="text" name="section" required />
+    <p>Email :</p>
+    <input type="email" name="email" required />
+    <input type="submit" value="Send" />
+  </form>
+</main>
+{% endblock %}

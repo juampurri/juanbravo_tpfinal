@@ -1,0 +1,19 @@
+{% extends 'index.html' %}
+<!-- STATIC-->
+{% load static %}
+
+<!-- block content -->
+{% block contenido %}
+<h2>Results search</h2>
+{% if cursos %}
+<ul>
+  {% for curso in cursos %}
+  <li>Name: {{curso.name}}</li>
+  <li>Section: {{curso.section}}</li>
+  {% endfor %}
+</ul>
+{% else %}
+<p>Not found cursos</p>
+{% endif %}
+<!-- end block-->
+{% endblock %}

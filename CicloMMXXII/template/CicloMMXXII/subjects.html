@@ -1,0 +1,27 @@
+{% extends 'index.html' %}
+<!-- STATIC-->
+{% load static %}
+
+<!-- block content -->
+{% block contenido %}
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">name</th>
+      <th scope="col">section</th>
+    </tr>
+  </thead>
+  <tbody>
+    {%for n in subjects %}
+    <tr>
+      <th scope="row">{{n.id}}</th>
+      <td>{{n.name}}</td>
+      <td>{{n.section}}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+<!-- end block-->
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'index.html' %}
+<!-- STATIC-->
+{% load static %}
+
+<!-- block content -->
+{% block contenido %}
+<main class="container">
+  <h2 style="text-align: center">About me</h2>
+  <img
+    class="rounded mx-auto d-block"
+    src="{% static 'CicloMMXXII/assets/img/Iceman.jpg' %}"
+    alt=""
+  />
+  <p style="color: rgb(38, 38, 218)">
+    Hola, soy Juan Manuel Bravo, es mi primer blog que desarrollo con Django,
+    perdón ya de antemano por la desprolijidad, tuve unos problemas con
+    implementar mi CSS, por eso tuve que optar por la plantilla, porque no
+    disponía de mucho tiempo lamentablemente. El proyecto es sobre la escuela de
+    aviación militar de Argentina, un sistema online con el que se logueen los
+    cadetes, los instructores, y sepan quien y que materia da cada instructor,
+    para facilitarles un poco la vida en la institución. Opté por hacer el
+    trabajo solo
+  </p>
+  <img src="" alt="" />
+</main>
+<!-- end block-->
+{% endblock %}

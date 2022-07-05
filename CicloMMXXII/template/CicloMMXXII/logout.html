@@ -1,0 +1,17 @@
+{% extends 'index.html' %}
+<!-- STATIC-->
+{% load static %}
+
+<!-- block content -->
+{% block contenido %}
+<div class="container">
+  <h2 style="text-align: center">Gracias, vuelva pronto</h2>
+  <img
+    class="rounded mx-auto d-block"
+    src="{% static 'CicloMMXXII/assets/img/gracias.jpg' %}"
+    alt=""
+  />
+</div>
+
+<!-- end block-->
+{% endblock %}

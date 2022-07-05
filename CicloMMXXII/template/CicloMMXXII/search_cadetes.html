@@ -1,0 +1,15 @@
+<!-- extends index-->
+{% extends "index.html" %}
+<!-- static -->
+{% load static %}
+<!-- contenido-->
+{% block contenido %}
+<main>
+  <h2 style="text-align: center">Search cadetes</h2>
+  <form action="search" method="GET">
+    <p>Name</p>
+    <input type="text" name="name" id="name" />
+    <input type="submit" value="Search" />
+  </form>
+</main>
+{% endblock %}

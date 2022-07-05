@@ -1,0 +1,102 @@
+<!-- extends index-->
+{% extends "index.html" %}
+<!-- static -->
+{% load static %}
+<!-- contenido-->
+{% block contenido %}
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">name</th>
+      <th scope="col">lastname</th>
+      <th scope="col">email</th>
+    </tr>
+  </thead>
+  <tbody>
+    {%for n in cadetes %}
+    <tr>
+      <th scope="row">{{n.id}}</th>
+      <td>{{n.name}}</td>
+      <td>{{n.lastname}}</td>
+      <td>{{n.email}}</td>
+      <td><a href="{% url 'delete_cadetes' n.id %}">Delete</a></td>
+      <td><a href="{% url 'edit_cadete' n.id %}">Edit</a></td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+<button>
+  <a href="alta_cadetes">Agregar nuevo cadete</a>
+</button>
+
+<!-- 
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="card" style="width: 18rem">
+        <img
+          src="{% static 'CicloMMXXII/assets/img/carballo.jpg' %}"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Comodoro Carballo 'Cruz'</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width: 18rem">
+        <img
+          src="{% static 'CicloMMXXII/assets/img/Iceman.jpg' %}"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Iceman</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div class="card" style="width: 18rem">
+        <img src="..." class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">PApus Lecherus</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width: 18rem">
+        <img
+          src="{% static 'CicloMMXXII/assets/img/topgun.jpg' %}"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Teniente Mitchell ' Maverick '</h5>
+          <p class="card-text">Nice</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+  </div>-->
+</div>
+
+{% endblock %}

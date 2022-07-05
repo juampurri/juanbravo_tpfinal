@@ -1,0 +1,23 @@
+<!-- extends index-->
+{% extends "index.html" %}
+<!-- static -->
+{% load static %}
+<!-- contenido-->
+{% block contenido %}
+<main>
+  <h2 style="text-align: center">Editar perfil</h2>
+  <img
+    class="rounded mx-auto d-block"
+    src="{% static 'CicloMMXXII/assets/img/owencrippa.jpg' %}"
+    alt=""
+  />
+  <h2>{{ usuario }}</h2>
+  <form action="" method="POST">
+    {% csrf_token %}
+    <table>
+      {{ miFormulario.as_table }}
+    </table>
+    <input type="submit" value="Send" />
+  </form>
+</main>
+{% endblock %}

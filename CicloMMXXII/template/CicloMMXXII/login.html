@@ -1,0 +1,24 @@
+{% extends 'index.html' %}
+<!-- STATIC-->
+{% load static %}
+
+<!-- block content -->
+{% block contenido %}
+<div class="container">
+  <h2 style="text-align: center">Login</h2>
+  <img
+    class="rounded mx-auto d-block"
+    src="{% static 'CicloMMXXII/assets/img/topgun.jpg' %}"
+    alt=""
+  />
+  <form style="text-align: center" action="" method="POST">
+    {% csrf_token %}
+    <!-- espacio -->
+    {{form.as_p}}
+    <button type="">Sign</button>
+    <!--  <a style="text-align: center" href="{% url 'register' % }">Registrate</a>-->
+  </form>
+</div>
+
+<!-- end block-->
+{% endblock %}
